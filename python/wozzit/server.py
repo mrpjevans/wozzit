@@ -256,15 +256,18 @@ class Server:
                 self.onError('forward', r)
 
     def __desktopNotification(self, action, msg):
+        self.desktopNotification("Wozzit", action['message'])
+
+    def desktopNotification(self, title, message):
         logging.info('Triggering desktop notification')
         if platform.system() == 'Darwin':
-            pync.notify(action['message'], title='Wozzit', sound='default')
+            pync.notify(message, title, sound='default')
         elif platform.system() == 'Windows':
             toaster = ToastNotifier()
-            toaster.show_toast("Wozzit", action['message'])
+            toaster.show_toast(title, message)
         elif platform.system() == 'Linux':
-            notify2.init('Wozzit')
-            n = notify2.Notification('Wozzit', action['message'])
+            notify2.init(title)
+            n = notify2.Notification(title, message)
             n.show()
 
     def __sendEmail(self, action, msg):
@@ -294,7 +297,9 @@ class Server:
             try:
                 mta.sendmail(self.smtp['fromEmail'], toEmail, msgText)
                 logging.info('Email sent to ' + toEmail)
+                return True
             except:
                 e = sys.exc_info()[0]
                 logging.error('Failed to send email: ' + str(e))
+                return False
 
