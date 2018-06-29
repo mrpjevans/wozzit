@@ -26,11 +26,11 @@ The following is an example Wozzit Message in JSON format:
 
 ```json
 {
-	wozzit: {
-		protocol: [0, 0, 1],
-		schema: "wozzit.example",
-		version: 1,
-		payload: {
+	"wozzit": {
+		"protocol": [0, 0, 1],
+		"schema": "wozzit.example",
+		"version": 1,
+		"payload": {
 			"message": "Hello, world"
 		}
 	}
