@@ -61,11 +61,11 @@ A microcontroller (e.g. Microbit or ESP8266) is using an implementation of wozzi
 
 ```json
 {
-	wozzit: {
-		protocol: [0, 0, 1],
-		schema: "wozzit.switch",
-		version: 1,
-		payload: {
+	"wozzit": {
+		"protocol": [0, 0, 1],
+		"schema": "wozzit.switch",
+		"version": 1,
+		"payload": {
 			"open": true
 		}
 	}
@@ -91,7 +91,7 @@ Upon receiving the message, the wozzit server instance can do what ever it likes
 
 For example (using Python)
 
-```
+```python
 import wozzit
 
 # Define a callback function to do print a message when the door opens of closes
