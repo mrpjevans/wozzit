@@ -2,6 +2,11 @@
 
 A simple communication system for the Internet of Things (or anything you want)
 
+- [Message Schema](schema.md)
+- [Server](server.md)
+- [Python Message Class Reference](msgref.md)
+- [Python Server Class Reference](serverref.md)
+
 ### The Problem
 
 These days just about anything can be connected to the Internet: Doorbells, central heating, fridges, toasters, banana stands\*. So why is it so difficult to get these things talking to each other without five different 'cloud' accounts and an overly-complicated IFTTT script? After all, if I want to have my coffee machine switch on if the garage door is opened on a Thursday after 4pm, why shouldn't I? \*\*

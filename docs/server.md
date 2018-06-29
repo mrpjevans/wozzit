@@ -2,7 +2,7 @@
 
 ### Protocol Version 0.0.1
 
-Wozzit does not prescribe any particular type of server. If you want to use MQTT, semaphone or carrier pigeons to relay messages please feel free to do so. Realistically, we need something commonly used in place, so the Wozzit implementations found on the GitHub repository provide an implementation in HTTP for your use. This document describes its usage.
+Wozzit does not prescribe any particular type of server. If you want to use MQTT, semaphore or carrier pigeons to relay messages please feel free to do so. Realistically, we need something commonly used in place, so the Wozzit implementations found on the GitHub repository provide an implementation in HTTP for your use. This document describes its usage.
 
 #### Python
 The Python library is the simplest to use. To create a Wozzit server, here is all the code you need:
@@ -90,4 +90,5 @@ svr.addDesktopNotification({
 
 If the incoming message does not contain the correct PSK, it is rejected.
 
-Full Server Implementation Reference
+[Full Server Implementation Reference](serverref.md)
+

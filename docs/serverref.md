@@ -1,11 +1,9 @@
 ## Wozzit Server Reference
 
-
 * Version: 0.1.1
 * Protocol: 0.0.1
 * Platform: Python
 * Protocol: HTTP
-
 
 #### Requirements
 
@@ -14,13 +12,7 @@
 #### External Dependancies
 
 * requests `pip install requests`
-* Notifcation library (optional) see desktopNotification() method below
-
-#### Installation
-
-```python
-pip install wozzit
-```
+* Notification library (optional) see desktopNotification() method below
 
 #### Creating an Instance
 
@@ -113,7 +105,7 @@ match = {
 
 Same again, but not the IPv4 address must match as well (this header is set by the receiving node, not by the client).
 
-You are free to add your own arbitry headers provided thaey are prefixed with 'x-'. If match is omitted, all messages match.
+You are free to add your own arbitary headers provided they are prefixed with 'x-'. If match is omitted, all messages match.
 
 
 #### Server.addLog([_match_])
@@ -124,7 +116,7 @@ Print the message contents to the console whenever a message matches the criteri
 
 Where callback is a defined function. The function is called if the message is matched. This allows you to run your own code when a message is received, so you can do whatever you like.
 
-The called function is passed the match dictionaty and the full message instance for processing.
+The called function is passed the match dictionary and the full message instance for processing.
 
 ##### Example
 

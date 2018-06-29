@@ -112,7 +112,7 @@ wozzit:
 
 **payload**
 
-Here's the good bit. The payload is the main content of the message and contains whever your schema dictates. There are no rules here except what the schema states should be present.
+Here's the good bit. The payload is the main content of the message and contains whatever your schema dictates. There are no rules here except what the schema states should be present.
 
 Example: You have a schema called com.example.cheese. The schema states that the payload with contain one single key-pair called 'cheese' with a string which is the name of a nice cheese.
 

@@ -35,7 +35,7 @@ msg = wozzit.Message([json])
 
 _Array_ **Default: [0, 0, 1]**
 
-A three-element array representing the Wozzit protocol version in symantic versioning format (symver). The current protocol version is 0.0.1 so the content of Message.protocol is [0, 0, 1] by default.
+A three-element array representing the Wozzit protocol version in semantic versioning format (symver). The current protocol version is 0.0.1 so the content of Message.protocol is [0, 0, 1] by default.
 
 The protocol is used by the server to determine whether it can process the message. This will allow for changes in the Wozzit Message specification in future.
 
@@ -66,7 +66,7 @@ Only populated in received messages. This property is set by the receiving serve
 
 _String_
 
-A pre-shared key. You can add secutity to you messages by ensuring each device transmits the PSK with their messages. You can then add it as a match requirement for incoming messages. There are no constraints on what is contained.
+A pre-shared key. You can add security to your messages by ensuring each device transmits the PSK with their messages. You can then add it as a match requirement for incoming messages. There are no constraints on what is contained.
 
 #### Message.payload
 
@@ -90,7 +90,7 @@ Deserialise either a Python Dictionary or JSON message into the object. Returns 
 
 #### Message.send(_to_)
 
-Not usng a server instance? This shortcut allows you to send the current message to another server. _to_ must be the full URL including port. Returns a _requests_ response object.
+Not using a server instance? This shortcut allows you to send the current message to another server. _to_ must be the full URL including port. Returns a _requests_ response object.
 
 ### Examples
 
