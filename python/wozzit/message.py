@@ -1,4 +1,4 @@
-import json
+import json, requests
 
 # A message past from Wozzit node to Wozzit node
 # This class' concerns are parsing, validating and rendering messages
@@ -12,7 +12,7 @@ class Message:
     # Set up instance-scoped variables
     def _reset(self):
 
-        # Protocol allows for future versions of Havers. Uses semantic versioning in tuple form.
+        # Protocol allows for future versions of messages. Uses semantic versioning in tuple form.
         # Min and max represent the boundaries of what we can support.
         self.protocol = (0, 0, 1)
         self.minProtocol = (0, 0, 1)
@@ -93,6 +93,11 @@ class Message:
             self.ip = ip
 
         return True
+
+    # Send this message to another node
+    def send(self, to):
+        return requests.post(url = to, json = self.toDict())
+
 
 class ErrorMessage(Message):
     # Override to create an 'error' Haver
