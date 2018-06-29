@@ -12,11 +12,6 @@
 
 * requests `pip install requests`
 
-#### Installation
-
-```python
-pip install wozzit
-```
 
 #### Creating an Instance
 
